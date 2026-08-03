@@ -125,6 +125,8 @@
     background:linear-gradient(135deg,rgba(255,138,42,.16),rgba(76,201,240,.14));border:1px solid var(--line2)}
   .card h3{font-size:1.08rem;font-weight:700;margin-bottom:9px}
   .card p{font-size:.92rem;color:var(--muted)}
+  .card>img{width:100%;height:auto;display:block;border-radius:12px;border:1px solid var(--line);margin:0 0 20px}
+  .claim>img{width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--line);margin:0 0 14px}
   .card .step{position:absolute;top:18px;right:22px;font-family:Sora;font-size:2.2rem;font-weight:800;color:rgba(148,163,184,.14)}
   .bignum b{display:block;font-family:Sora;font-size:2rem;font-weight:800;color:var(--orange-soft);margin-bottom:6px}
   .split{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;margin-top:44px;align-items:stretch}
@@ -243,7 +245,6 @@
       Newhab
     </a>
     <nav class="navlinks" id="navlinks">
-      <a href="#early-access">Get Updates</a>
       <a href="#problem">The Problem</a>
       <a href="#how">How It Works</a>
       <a href="#product">The Braces</a>
@@ -251,6 +252,7 @@
       <a href="#mission">Benny Labs</a>
       <a href="#patent">Patent</a>
       <a href="#contact">Contact</a>
+      <a href="#early-access">Get Updates</a>
     </nav>
     <div class="navcta">
       <span class="chip">A Benny Labs Initiative</span>
@@ -258,9 +260,9 @@
     </div>
   </div>
   <nav class="mobilemenu" id="mobilemenu" aria-label="Mobile">
-    <a href="#early-access">Get Updates</a><a href="#problem">The Problem</a><a href="#how">How It Works</a>
+    <a href="#problem">The Problem</a><a href="#how">How It Works</a>
     <a href="#product">The Braces</a><a href="#uses">Who It's For</a><a href="#mission">Benny Labs</a>
-    <a href="#patent">Patent</a><a href="#contact">Contact</a>
+    <a href="#patent">Patent</a><a href="#contact">Contact</a><a href="#early-access">Get Updates</a>
   </nav>
 </header>
 
@@ -296,54 +298,6 @@
     </div>
   </div>
 
-  <!-- GET UPDATES -->
-  <section id="early-access">
-    <div class="wrap">
-      <div class="signuppanel reveal">
-        <span class="badge"><span class="dot" aria-hidden="true"></span>In development</span>
-        <h2>Follow the work — or partner with us.</h2>
-        <p class="sub">Newhab is patent pending and in active development at Benny Labs. Whether you're a
-          therapist, a clinic, a caregiver, a researcher, or a potential grant or nonprofit partner, leave
-          your details and we'll keep you posted — and reach out about pilots and collaborations.</p>
-        <form class="signupform" id="tc-signup" action="https://formsubmit.co/ajax/bennygoldstein@msn.com" method="POST">
-          <input type="hidden" name="_subject" value="Newhab (rehab) — interest / partner signup">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-          <div class="fgrid2">
-            <label class="fld"><span>Name <i>*</i></span><input type="text" name="Name" required autocomplete="name" placeholder="Your name"></label>
-            <label class="fld"><span>Email <i>*</i></span><input type="email" name="Email" required autocomplete="email" placeholder="you@example.com"></label>
-            <label class="fld"><span>Organization</span><input type="text" name="Organization" placeholder="Clinic, hospital, foundation — optional"></label>
-            <label class="fld"><span>Where you are <i>*</i></span><input type="text" name="Location" required placeholder="City, State / Country"></label>
-          </div>
-          <label class="fld"><span>What describes you best? <i>*</i></span>
-            <select name="I am" required>
-              <option value="" selected disabled>Please choose one</option>
-              <option>Physical / occupational therapist</option>
-              <option>Clinic or hospital rehab department</option>
-              <option>Patient or caregiver</option>
-              <option>Researcher / academic</option>
-              <option>Grant-making foundation or agency</option>
-              <option>Nonprofit / community health partner</option>
-              <option>Manufacturer or distributor</option>
-              <option>Press or media</option>
-              <option>Just interested</option>
-            </select>
-          </label>
-          <label class="fld"><span>How you'd use it, or how we might work together</span>
-            <textarea name="Notes" rows="3" placeholder="Condition, setting, patient population, grant program — anything helpful."></textarea></label>
-          <button type="submit" class="btn btn-primary signupbtn">Keep me updated</button>
-          <p class="fnote">No spam, and you can ask us to remove you at any time. We'll only use this to send you Newhab updates.</p>
-        </form>
-        <div class="signupdone" id="tc-done" hidden>
-          <div class="tick" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#ffb066" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.2 5.2L20 7"/></svg></div>
-          <h3>Thank you — you're on the list.</h3>
-          <p>We've got your details and we'll be in touch as Newhab moves forward.</p>
-          <p class="fnote">Questions in the meantime: hello@newhab.life</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- PROBLEM -->
   <section id="problem">
@@ -355,11 +309,11 @@
         healing joint, elastic bands pull back and can't hold a position, and neither lets you set — or
         record — an exact, repeatable number.</p>
       <div class="cards c3">
-        <div class="card bignum reveal"><b>Imprecise</b><h3>Ounces matter, but tools guess</h3>
+        <div class="card bignum reveal"><img src="img/problem-1.jpg" width="640" height="771" alt="A person looking uncertainly at a light dumbbell beside resistance bands." loading="lazy" decoding="async"><b>Imprecise</b><h3>Ounces matter, but tools guess</h3>
           <p>Bands and light weights can't be set to a specific sub-pound load, so the "dose" of exercise is approximate and hard to progress safely.</p></div>
-        <div class="card bignum reveal"><b>Unsafe</b><h3>A dropped weight sets recovery back</h3>
+        <div class="card bignum reveal"><img src="img/problem-2.jpg" width="640" height="771" alt="A person on the floor holding a painful arm after a dropped weight and a snapped band." loading="lazy" decoding="async"><b>Unsafe</b><h3>A dropped weight sets recovery back</h3>
           <p>Free weights and stretched bands store energy. For a weak or painful limb, a slip or a snap-back can mean re-injury.</p></div>
-        <div class="card bignum reveal"><b>Unmeasured</b><h3>Progress that can't be tracked</h3>
+        <div class="card bignum reveal"><img src="img/problem-3.jpg" width="640" height="774" alt="A person facing a progress chart with question marks in place of weekly results." loading="lazy" decoding="async"><b>Unmeasured</b><h3>Progress that can't be tracked</h3>
           <p>Without a real number and a fixed hold, it's hard to document range, load, and improvement for the patient, the therapist, or the payer.</p></div>
       </div>
     </div>
@@ -373,15 +327,15 @@
       <p class="sub reveal">The same core mechanism behind the invention — a friction brake, a one-way clutch,
         and a self-locking dial — is tuned here for the gentle, safety-critical world of early rehab.</p>
       <div class="cards c3">
-        <div class="card reveal"><span class="step" aria-hidden="true">01</span>
+        <div class="card reveal"><span class="step" aria-hidden="true">01</span><img src="img/how-1.jpg" width="640" height="583" alt="A hand turning the graduated load dial on the brace, marked 0 to 5 lb." loading="lazy" decoding="async">
           <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffb066" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 12V6M12 12l4.5 2.6"/></svg></div>
           <h3>Dial the prescribed load</h3>
           <p>A graduated dial sets gentle resistance across the 0–5 lb range in exact, repeatable numbers — a real dose a therapist can prescribe and progress.</p></div>
-        <div class="card reveal"><span class="step" aria-hidden="true">02</span>
+        <div class="card reveal"><span class="step" aria-hidden="true">02</span><img src="img/how-2.jpg" width="640" height="534" alt="A seated patient wearing the brace, with the working direction resisted and the return easy." loading="lazy" decoding="async">
           <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4cc9f0" stroke-width="1.8" stroke-linecap="round"><path d="M4 12a8 8 0 0 1 8-8M20 12a8 8 0 0 1-8 8"/><path d="M12 4l3 2-3 2M12 20l-3-2 3-2"/></svg></div>
           <h3>Resist one way, ease the other</h3>
           <p>A one-way clutch can resist the working motion while leaving the return easy or free — supporting the limb through the range instead of fighting it both ways.</p></div>
-        <div class="card reveal"><span class="step" aria-hidden="true">03</span>
+        <div class="card reveal"><span class="step" aria-hidden="true">03</span><img src="img/how-3.jpg" width="640" height="574" alt="A seated patient pausing mid-movement while the brace holds the position." loading="lazy" decoding="async">
           <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ff8a2a" stroke-width="1.8" stroke-linecap="round"><path d="M12 3c-2.8 3.8-6 6.6-6 10a6 6 0 0 0 12 0c0-3.4-3.2-6.2-6-10z"/></svg></div>
           <h3>Holds anywhere — the safety piece</h3>
           <p>Because friction stores no energy and the dial is self-locking, the brace simply holds wherever the patient pauses. No drop, no recoil — the property that matters most for a fragile joint.</p></div>
@@ -457,11 +411,11 @@
         the device accessible through government and foundation grants, research partnerships, and
         collaborations with clinics — so cost is never the reason someone recovers less than they could.</p>
       <div class="cards c3">
-        <div class="card reveal"><h3>Grant-funded development</h3>
+        <div class="card reveal"><img src="img/mission-1.jpg" width="640" height="728" alt="An engineer at a Benny Labs bench assembling the brace mechanism beside a drawing." loading="lazy" decoding="async"><h3>Grant-funded development</h3>
           <p>We are pursuing government and nonprofit grants to fund prototyping, testing, and clinical evaluation — keeping the technology mission-first.</p></div>
-        <div class="card reveal"><h3>Clinical &amp; research partners</h3>
+        <div class="card reveal"><img src="img/mission-2.jpg" width="640" height="727" alt="A clinician fitting the brace to a seated participant in a research setting." loading="lazy" decoding="async"><h3>Clinical &amp; research partners</h3>
           <p>We're seeking therapists, clinics, and researchers to co-design and pilot the braces with real patients and real outcomes.</p></div>
-        <div class="card reveal"><h3>Access-first</h3>
+        <div class="card reveal"><img src="img/mission-3.jpg" width="640" height="727" alt="A phone showing home, clinic and patient access options beside a shipping box." loading="lazy" decoding="async"><h3>Access-first</h3>
           <p>The goal is a device clinics and patients can actually afford — distributed through partners, grants, and programs rather than priced out of reach.</p></div>
       </div>
       <div class="cta-row reveal" style="margin-top:34px">
@@ -478,11 +432,11 @@
       <h2 class="reveal">Protected by a filed U.S. patent application.</h2>
       <div class="patentpanel reveal">
         <p>Direction-Dependent Resistance Mechanism for Exercise and Rehabilitation —
-          <span class="appno">U.S. Application No. 19/722,859</span>, filed June 28, 2026. Patent pending.</p>
+          <span class="appno">U.S. Application Patent Pending</span>.</p>
         <div class="claimgrid">
-          <div class="claim"><b>Sets and holds the load</b><p>A self-locking, non-backdrivable dial sets the brake load and holds it under any force — the property that keeps a fragile limb safe.</p></div>
-          <div class="claim"><b>Direction-dependent by design</b><p>A one-way clutch can resist the working motion while easing the return, supporting the limb through its range.</p></div>
-          <div class="claim"><b>Compact &amp; wearable</b><p>The mechanism is small enough to sit comfortably in a joint brace with a graduated, therapist-set dial.</p></div>
+          <div class="claim"><img src="img/claim-1.jpg" width="640" height="852" alt="The brake dial with a lock indicator reading HOLD, locked under load." loading="lazy" decoding="async"><b>Sets and holds the load</b><p>A self-locking, non-backdrivable dial sets the brake load and holds it under any force — the property that keeps a fragile limb safe.</p></div>
+          <div class="claim"><img src="img/claim-2.jpg" width="640" height="513" alt="An arm wearing the brace, showing the working motion resisted and the return eased." loading="lazy" decoding="async"><b>Direction-dependent by design</b><p>A one-way clutch can resist the working motion while easing the return, supporting the limb through its range.</p></div>
+          <div class="claim"><img src="img/claim-3.jpg" width="640" height="517" alt="The compact brace mechanism sitting low-profile against the arm." loading="lazy" decoding="async"><b>Compact &amp; wearable</b><p>The mechanism is small enough to sit comfortably in a joint brace with a graduated, therapist-set dial.</p></div>
         </div>
       </div>
       <p class="fnote reveal" style="margin-top:16px">Patent pending. Newhab is an investigational rehabilitation device in development; it is not FDA-cleared and no medical claims of treatment efficacy are made. Nothing here is a guarantee of grant, scope, or performance.</p>
@@ -499,6 +453,55 @@
         <div class="cta-row" style="justify-content:center;margin-top:28px">
           <a class="btn btn-primary" href="mailto:hello@newhab.life">Email Benny Labs</a>
           <a class="btn btn-ghost" href="#early-access">Get updates</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GET UPDATES -->
+  <section id="early-access">
+    <div class="wrap">
+      <div class="signuppanel reveal">
+        <span class="badge"><span class="dot" aria-hidden="true"></span>In development</span>
+        <h2>Follow the work — or partner with us.</h2>
+        <p class="sub">Newhab is patent pending and in active development at Benny Labs. Whether you're a
+          therapist, a clinic, a caregiver, a researcher, or a potential grant or nonprofit partner, leave
+          your details and we'll keep you posted — and reach out about pilots and collaborations.</p>
+        <form class="signupform" id="tc-signup" action="https://formsubmit.co/ajax/bennygoldstein@msn.com" method="POST">
+          <input type="hidden" name="_subject" value="Newhab (rehab) — interest / partner signup">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <div class="fgrid2">
+            <label class="fld"><span>Name <i>*</i></span><input type="text" name="Name" required autocomplete="name" placeholder="Your name"></label>
+            <label class="fld"><span>Email <i>*</i></span><input type="email" name="Email" required autocomplete="email" placeholder="you@example.com"></label>
+            <label class="fld"><span>Organization</span><input type="text" name="Organization" placeholder="Clinic, hospital, foundation — optional"></label>
+            <label class="fld"><span>Where you are <i>*</i></span><input type="text" name="Location" required placeholder="City, State / Country"></label>
+          </div>
+          <label class="fld"><span>What describes you best? <i>*</i></span>
+            <select name="I am" required>
+              <option value="" selected disabled>Please choose one</option>
+              <option>Physical / occupational therapist</option>
+              <option>Clinic or hospital rehab department</option>
+              <option>Patient or caregiver</option>
+              <option>Researcher / academic</option>
+              <option>Grant-making foundation or agency</option>
+              <option>Nonprofit / community health partner</option>
+              <option>Manufacturer or distributor</option>
+              <option>Press or media</option>
+              <option>Just interested</option>
+            </select>
+          </label>
+          <label class="fld"><span>How you'd use it, or how we might work together</span>
+            <textarea name="Notes" rows="3" placeholder="Condition, setting, patient population, grant program — anything helpful."></textarea></label>
+          <button type="submit" class="btn btn-primary signupbtn">Keep me updated</button>
+          <p class="fnote">No spam, and you can ask us to remove you at any time. We'll only use this to send you Newhab updates.</p>
+        </form>
+        <div class="signupdone" id="tc-done" hidden>
+          <div class="tick" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#ffb066" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.2 5.2L20 7"/></svg></div>
+          <h3>Thank you — you're on the list.</h3>
+          <p>We've got your details and we'll be in touch as Newhab moves forward.</p>
+          <p class="fnote">Questions in the meantime: hello@newhab.life</p>
         </div>
       </div>
     </div>
