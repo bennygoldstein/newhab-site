@@ -129,6 +129,18 @@
   .card h3{font-size:1.08rem;font-weight:700;margin-bottom:9px}
   .card p{font-size:.92rem;color:var(--muted)}
   .card>img{width:100%;height:auto;display:block;border-radius:12px;border:1px solid var(--line);margin:0 0 20px}
+  .whatitis{margin-top:44px;border:1px solid rgba(255,138,42,.42);border-radius:var(--radius);
+    padding:30px 34px;position:relative;overflow:hidden;
+    background:radial-gradient(80% 160% at 0% 0%,rgba(255,138,42,.13) 0%,transparent 62%),
+               linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015));
+    box-shadow:0 0 0 1px rgba(255,138,42,.08),0 18px 60px rgba(0,0,0,.45)}
+  @media(max-width:700px){.whatitis{padding:24px 22px}}
+  .whatitis .lead{font-family:Sora,Inter,sans-serif;font-size:clamp(1.15rem,2.5vw,1.55rem);
+    font-weight:800;line-height:1.25;letter-spacing:-.01em;margin-bottom:14px}
+  .whatitis .lead .no{color:var(--orange-soft)}
+  .whatitis .lead .yes{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .whatitis p{color:var(--muted);font-size:1.02rem;max-width:76ch}
+  .whatitis p strong{color:var(--text)}
   .poster{max-width:880px;margin:56px auto 0}
   .poster a{display:block;border-radius:22px;overflow:hidden;border:1px solid var(--line2);
     box-shadow:0 24px 80px rgba(0,0,0,.6),0 0 90px rgba(255,138,42,.10);transition:transform .25s,box-shadow .25s}
@@ -396,11 +408,21 @@
           <p class="caption">Gentle, exact, and it holds where you stop. Concept render.</p>
         </div>
       </div>
+
+      <div class="whatitis reveal">
+        <p class="lead"><span class="no">This is not a brace that limits movement.</span><br>
+          <span class="yes">It is an exercise device that rebuilds muscle.</span></p>
+        <p>An ordinary rehabilitation brace restricts a joint to protect it. Newhab does the opposite: it lets
+          the joint move through its range and works the muscle with <strong>adjustable tension instead of heavy
+          weights</strong>. Lightweight, worn on the limb, and dialled to the exact load — so strength comes
+          back, safely, without a dumbbell anywhere near a healing joint.</p>
+      </div>
+
       <div class="stats">
         <div><b>0–5 lb</b><span>precise, dial-set resistance</span></div>
         <div><b>Holds</b><span>at any angle — nothing is dropped</span></div>
         <div><b>Arm &amp; leg</b><span>wearable braces for major joints</span></div>
-        <div><b>Non-profit</b><span>developed by Benny Labs</span></div>
+        <div><b>501(c)(3)</b><span>co-developed with Benny Labs Foundation</span></div>
       </div>
       <figure class="poster reveal">
         <a href="img/poster-newhab.jpg" target="_blank" rel="noopener" aria-label="Open the full-size Newhab overview image">
@@ -519,8 +541,8 @@
     <div class="wrap">
       <p class="kicker reveal">Benny Labs</p>
       <h2 class="reveal">A nonprofit effort to put precise, safe rehab within everyone's reach.</h2>
-      <p class="sub reveal">Newhab is developed by <strong style="color:var(--text)">Benny Labs</strong>, a
-        nonprofit dedicated to affordable rehabilitation technology. Our aim is to fund development and keep
+      <p class="sub reveal">Newhab is <strong style="color:var(--text)">co-developed with the Benny Labs Foundation</strong>, an
+        approved <strong style="color:var(--text)">501(c)(3) not-for-profit</strong> dedicated to affordable rehabilitation technology. Our aim is to fund development and keep
         the device accessible through government and foundation grants, research partnerships, and
         collaborations with clinics — so cost is never the reason someone recovers less than they could.</p>
       <div class="cards c3">
@@ -541,7 +563,7 @@
             Benny Labs to get it into the hands of the people who need it most.</p>
           <p>A lawyer by training — LLB and LLM, specialising in patent and contract law — he drafts
             and files his own patent applications, including the one protecting this device.</p>
-          <p>Benny Labs is a nonprofit by design. The earliest weeks of recovery are where precise,
+          <p>The Benny Labs Foundation is an approved 501(c)(3) not-for-profit, and that is deliberate. The earliest weeks of recovery are where precise,
             safe loading matters most, and they are also where the available tools are weakest.
             Building this as a mission rather than a margin is what keeps it reachable for the clinics
             and patients who stand to gain the most from it.</p>
@@ -578,7 +600,7 @@
       <div class="contactpanel reveal">
         <p class="kicker" style="justify-content:center">Get In Touch</p>
         <h2>Clinics, researchers &amp; grant partners.</h2>
-        <p class="sub">If you'd like to pilot Newhab, collaborate on research, or explore grant and nonprofit funding with Benny Labs, we'd love to hear from you.</p>
+        <p class="sub">If you'd like to pilot Newhab, collaborate on research, or explore grant and nonprofit funding with the Benny Labs Foundation, we'd love to hear from you.</p>
         <div class="cta-row" style="justify-content:center;margin-top:28px">
           <a class="btn btn-primary" href="mailto:hello@newhab.life">Email Benny Labs</a>
           <a class="btn btn-ghost" href="#early-access">Get updates</a>
@@ -593,7 +615,7 @@
       <div class="signuppanel reveal">
         <span class="badge"><span class="dot" aria-hidden="true"></span>In development</span>
         <h2>Follow the work — or partner with us.</h2>
-        <p class="sub">Newhab is patent pending and in active development at Benny Labs. Whether you're a
+        <p class="sub">Newhab is patent pending and in active development, co-developed with the Benny Labs Foundation. Whether you're a
           therapist, a clinic, a caregiver, a researcher, or a potential grant or nonprofit partner, leave
           your details and we'll keep you posted — and reach out about pilots and collaborations.</p>
         <form class="signupform" id="tc-signup" action="https://formsubmit.co/ajax/bennygoldstein@msn.com" method="POST">
@@ -715,6 +737,13 @@
         <span>Total raise sought &mdash; grants and investment combined</span>
         <b>$325,000</b>
       </div>
+
+      <figure class="poster reveal" style="max-width:820px;margin:48px auto 0">
+        <a href="img/bp-device.jpg" target="_blank" rel="noopener" aria-label="Open the full-size Newhab mechanism image">
+          <img src="img/bp-device.jpg" width="1100" height="972" alt="The Newhab mechanism: a graduated adjustable-resistance dial joining two slotted links to padded limb cuffs." loading="lazy" decoding="async">
+        </a>
+        <figcaption>One passive mechanism, one dial, two braces. Concept render.</figcaption>
+      </figure>
 
       <!-- COMPETITIVE LANDSCAPE -->
       <h3 class="bph3 reveal">Competitive landscape</h3>
