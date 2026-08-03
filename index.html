@@ -131,6 +131,18 @@
     box-shadow:0 24px 80px rgba(0,0,0,.6),0 0 90px rgba(255,138,42,.10);transition:transform .25s,box-shadow .25s}
   .poster a:hover{transform:translateY(-3px);box-shadow:0 30px 100px rgba(0,0,0,.7),0 0 110px rgba(76,201,240,.16)}
   .poster figcaption{margin-top:12px;font-size:.76rem;color:var(--dim);text-align:center}
+  .founder{display:grid;grid-template-columns:.82fr 1.18fr;gap:44px;align-items:center;margin-top:56px;
+    border:1px solid var(--line);border-radius:var(--radius);padding:36px 38px;
+    background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.012))}
+  @media(max-width:820px){.founder{grid-template-columns:1fr;gap:28px;padding:28px 24px}}
+  .founder img{width:100%;height:auto;display:block;border-radius:16px;border:1px solid var(--line2);
+    box-shadow:0 18px 60px rgba(0,0,0,.5)}
+  .founder .kicker{margin-bottom:10px}
+  .founder h3{font-size:1.5rem;font-weight:800;letter-spacing:-.01em;margin-bottom:4px}
+  .founder .role{font-size:.85rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--cyan-soft);margin-bottom:18px}
+  .founder p{color:var(--muted);font-size:.97rem;margin-bottom:13px}
+  .founder p:last-child{margin-bottom:0}
   .claim>img{width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--line);margin:0 0 14px}
   .card .step{position:absolute;top:18px;right:22px;font-family:Sora;font-size:2.2rem;font-weight:800;color:rgba(148,163,184,.14)}
   .bignum b{display:block;font-family:Sora;font-size:2rem;font-weight:800;color:var(--orange-soft);margin-bottom:6px}
@@ -428,6 +440,22 @@
           <p>We're seeking therapists, clinics, and researchers to co-design and pilot the braces with real patients and real outcomes.</p></div>
         <div class="card reveal"><img src="img/mission-3.jpg" width="640" height="727" alt="A phone showing home, clinic and patient access options beside a shipping box." loading="lazy" decoding="async"><h3>Access-first</h3>
           <p>The goal is a device clinics and patients can actually afford — distributed through partners, grants, and programs rather than priced out of reach.</p></div>
+      </div>
+      <div class="founder reveal">
+        <img src="img/founder.jpg" width="760" height="950" alt="Benny Goldstein holding the Newhab brace." loading="lazy" decoding="async">
+        <div>
+          <p class="kicker">The Founder</p>
+          <h3>Benny Goldstein</h3>
+          <p class="role">Founder &amp; Inventor, Benny Labs</p>
+          <p>Benny invented the direction-dependent resistance mechanism behind Newhab and founded
+            Benny Labs to get it into the hands of the people who need it most.</p>
+          <p>A lawyer by training — LLB and LLM, specialising in patent and contract law — he drafts
+            and files his own patent applications, including the one protecting this device.</p>
+          <p>Benny Labs is a nonprofit by design. The earliest weeks of recovery are where precise,
+            safe loading matters most, and they are also where the available tools are weakest.
+            Building this as a mission rather than a margin is what keeps it reachable for the clinics
+            and patients who stand to gain the most from it.</p>
+        </div>
       </div>
       <div class="cta-row reveal" style="margin-top:34px">
         <a class="btn btn-primary" href="#contact">Partner or fund this work</a>
