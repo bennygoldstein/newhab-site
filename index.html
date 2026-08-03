@@ -146,6 +146,92 @@
     color:var(--cyan-soft);margin-bottom:18px}
   .founder p{color:var(--muted);font-size:.97rem;margin-bottom:13px}
   .founder p:last-child{margin-bottom:0}
+
+  /* ---------- business plan ---------- */
+  .bpbanner{border-radius:22px;overflow:hidden;border:1px solid var(--line2);margin-top:40px;
+    box-shadow:0 24px 80px rgba(0,0,0,.55)}
+  .bpnote{border:1px solid rgba(255,138,42,.34);background:rgba(255,138,42,.06);border-radius:14px;
+    padding:16px 20px;margin-top:26px;font-size:.88rem;color:var(--muted)}
+  .bpnote b{color:var(--orange-soft)}
+  .bph3{font-family:Sora;font-size:1.22rem;font-weight:800;margin:56px 0 6px;letter-spacing:-.01em}
+  .bpsub{color:var(--muted);font-size:.95rem;max-width:70ch;margin-bottom:26px}
+
+  .fundgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:880px){.fundgrid{grid-template-columns:1fr}}
+  .fund{border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;text-align:center;
+    background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.012));
+    transition:transform .2s,border-color .2s}
+  .fund:hover{transform:translateY(-3px);border-color:rgba(255,138,42,.42)}
+  .fund .gauge{width:150px;height:150px;margin:0 auto 16px;position:relative}
+  .fund .gval{position:absolute;inset:0;display:grid;place-items:center;font-family:Sora;
+    font-size:1.42rem;font-weight:800;color:var(--orange-soft)}
+  .fund h4{font-size:1rem;font-weight:700;margin-bottom:8px}
+  .fund ul{list-style:none;text-align:left;margin-top:12px}
+  .fund li{font-size:.83rem;color:var(--muted);padding-left:16px;position:relative;margin-bottom:6px;line-height:1.45}
+  .fund li::before{content:"";position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--cyan)}
+  .fundtotal{margin-top:20px;border:1px solid var(--line2);border-radius:14px;padding:20px 24px;
+    display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;
+    background:linear-gradient(92deg,rgba(255,138,42,.10),rgba(76,201,240,.07))}
+  .fundtotal b{font-family:Sora;font-size:1.75rem;font-weight:800;color:var(--text)}
+  .fundtotal span{font-size:.88rem;color:var(--muted)}
+
+  .swot{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  @media(max-width:880px){.swot{grid-template-columns:1fr}}
+  .sw{border:1px solid var(--line);border-radius:var(--radius);padding:24px 24px 26px;
+    background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.012))}
+  .sw header{display:flex;align-items:center;gap:11px;margin-bottom:14px;background:none;position:static;
+    border:none;backdrop-filter:none;height:auto;padding:0}
+  .sw .tag{font-family:"JetBrains Mono",monospace;font-size:.68rem;font-weight:600;letter-spacing:.14em;
+    padding:4px 9px;border-radius:6px}
+  .sw h4{font-size:1.02rem;font-weight:700}
+  .sw ul{list-style:none}
+  .sw li{font-size:.88rem;color:var(--muted);padding-left:17px;position:relative;margin-bottom:9px;line-height:1.5}
+  .sw li::before{content:"";position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%}
+  .sw-s{border-color:rgba(76,201,240,.30)} .sw-s .tag{color:#8fe3ff;background:rgba(76,201,240,.12);border:1px solid rgba(76,201,240,.3)}
+  .sw-s li::before{background:#4cc9f0}
+  .sw-w{border-color:rgba(255,138,42,.30)} .sw-w .tag{color:#ffb066;background:rgba(255,138,42,.12);border:1px solid rgba(255,138,42,.3)}
+  .sw-w li::before{background:#ff8a2a}
+  .sw-o{border-color:rgba(120,220,150,.28)} .sw-o .tag{color:#8fe0aa;background:rgba(120,220,150,.10);border:1px solid rgba(120,220,150,.28)}
+  .sw-o li::before{background:#6fd694}
+  .sw-t{border-color:rgba(240,120,120,.28)} .sw-t .tag{color:#ff9b9b;background:rgba(240,120,120,.10);border:1px solid rgba(240,120,120,.28)}
+  .sw-t li::before{background:#e87878}
+
+  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);
+    background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01))}
+  table.cmp{border-collapse:collapse;width:100%;min-width:760px;font-size:.87rem}
+  table.cmp th{text-align:left;padding:14px 16px;font-weight:700;font-size:.74rem;letter-spacing:.11em;
+    text-transform:uppercase;color:var(--cyan-soft);border-bottom:1px solid var(--line2);white-space:nowrap}
+  table.cmp td{padding:14px 16px;border-bottom:1px solid var(--line);color:var(--muted);vertical-align:top}
+  table.cmp tr:last-child td{border-bottom:none}
+  table.cmp td:first-child{color:var(--text);font-weight:600;white-space:nowrap}
+  table.cmp tr.us td{background:rgba(255,138,42,.07)}
+  table.cmp tr.us td:first-child{color:var(--orange-soft)}
+
+  .road{position:relative;margin-top:8px}
+  .road::before{content:"";position:absolute;left:0;right:0;top:26px;height:2px;
+    background:linear-gradient(90deg,rgba(255,138,42,.55),rgba(76,201,240,.45),rgba(148,163,184,.15))}
+  .roadgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative}
+  @media(max-width:880px){.roadgrid{grid-template-columns:1fr}.road::before{display:none}}
+  .ph .dot{width:15px;height:15px;border-radius:50%;background:var(--bg);border:2px solid var(--orange);
+    margin:19px 0 18px;box-shadow:0 0 0 5px rgba(255,138,42,.12)}
+  .ph .n{font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.15em;color:var(--cyan)}
+  .ph h4{font-size:.99rem;font-weight:700;margin:7px 0 5px}
+  .ph .dur{font-size:.76rem;color:var(--dim);margin-bottom:9px}
+  .ph p{font-size:.85rem;color:var(--muted);line-height:1.5}
+
+  .studies{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  @media(max-width:880px){.studies{grid-template-columns:1fr}}
+  .study{border:1px solid var(--line);border-radius:14px;padding:22px 22px;
+    background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01))}
+  .study .stage{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.13em;
+    color:var(--cyan);text-transform:uppercase}
+  .study h4{font-size:1rem;font-weight:700;margin:7px 0 10px}
+  .study dl{display:grid;grid-template-columns:auto 1fr;gap:5px 14px;font-size:.83rem}
+  .study dt{color:var(--dim);white-space:nowrap}
+  .study dd{color:var(--muted)}
+  .planned{display:inline-flex;align-items:center;gap:7px;font-size:.7rem;font-weight:700;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--orange-soft);border:1px solid rgba(255,138,42,.4);
+    background:rgba(255,138,42,.08);padding:6px 13px;border-radius:999px;margin-bottom:16px}
   .claim>img{width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--line);margin:0 0 14px}
   .card .step{position:absolute;top:18px;right:22px;font-family:Sora;font-size:2.2rem;font-weight:800;color:rgba(148,163,184,.14)}
   .bignum b{display:block;font-family:Sora;font-size:2rem;font-weight:800;color:var(--orange-soft);margin-bottom:6px}
@@ -273,6 +359,7 @@
       <a href="#patent">Patent</a>
       <a href="#contact">Contact</a>
       <a href="#early-access">Get Updates</a>
+      <a href="#plan">Business Plan</a>
     </nav>
     <div class="navcta">
       <span class="chip">A Benny Labs Initiative</span>
@@ -282,7 +369,7 @@
   <nav class="mobilemenu" id="mobilemenu" aria-label="Mobile">
     <a href="#problem">The Problem</a><a href="#how">How It Works</a>
     <a href="#product">The Braces</a><a href="#uses">Who It's For</a><a href="#mission">Benny Labs</a>
-    <a href="#patent">Patent</a><a href="#contact">Contact</a><a href="#early-access">Get Updates</a>
+    <a href="#patent">Patent</a><a href="#contact">Contact</a><a href="#early-access">Get Updates</a><a href="#plan">Business Plan</a>
   </nav>
 </header>
 
@@ -545,6 +632,301 @@
           <p>We've got your details and we'll be in touch as Newhab moves forward.</p>
           <p class="fnote">Questions in the meantime: hello@newhab.life</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSINESS PLAN -->
+  <section id="plan">
+    <div class="wrap">
+      <p class="kicker reveal">The Business Plan</p>
+      <h2 class="reveal">A home rehabilitation device, and what it takes to build it.</h2>
+      <p class="sub reveal">Newhab is designed to leave the clinic. A therapist sets the prescription; the
+        patient takes the brace home, dials the load themselves, and works the joint between visits — with a
+        device that cannot drop and cannot snap back. Below is what exists today, what it costs to finish,
+        and what we are honest about not yet knowing.</p>
+
+      <figure class="bpbanner reveal">
+        <img src="img/bp-clinic.jpg" width="1440" height="1080" alt="A physical therapist guiding a patient through an arm exercise while she wears the Newhab brace in a clinic." loading="lazy" decoding="async">
+      </figure>
+
+      <!-- USE OF FUNDS -->
+      <h3 class="bph3 reveal">What we are raising, and what it buys</h3>
+      <p class="bpsub reveal">Three tranches, each tied to a specific deliverable. We are pursuing a blend of
+        non-dilutive grant funding and private investment.</p>
+
+      <div class="fundgrid">
+        <div class="fund reveal">
+          <div class="gauge">
+            <svg viewBox="0 0 120 120" width="150" height="150" role="img" aria-label="Prototype: 50,000 dollars, 15 percent of the total raise">
+              <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(148,163,184,.16)" stroke-width="9"/>
+              <circle cx="60" cy="60" r="52" fill="none" stroke="#4cc9f0" stroke-width="9" stroke-linecap="round"
+                stroke-dasharray="50.3 326.7" transform="rotate(-90 60 60)"/>
+            </svg>
+            <div class="gval">$50k</div>
+          </div>
+          <h4>Final working prototype</h4>
+          <ul>
+            <li>Bench rig and torque-versus-angle characterisation across the full 0&ndash;5&nbsp;lb range</li>
+            <li>Three design iterations of the clutch and brake assembly</li>
+            <li>CAD, design-for-manufacture and materials selection</li>
+            <li>A small batch of functional units for usability testing</li>
+          </ul>
+        </div>
+
+        <div class="fund reveal">
+          <div class="gauge">
+            <svg viewBox="0 0 120 120" width="150" height="150" role="img" aria-label="First production run: 250,000 dollars, 77 percent of the total raise">
+              <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(148,163,184,.16)" stroke-width="9"/>
+              <circle cx="60" cy="60" r="52" fill="none" stroke="#ff8a2a" stroke-width="9" stroke-linecap="round"
+                stroke-dasharray="251.2 326.7" transform="rotate(-90 60 60)"/>
+            </svg>
+            <div class="gval">$250k</div>
+          </div>
+          <h4>First production run</h4>
+          <ul>
+            <li>Injection-mould tooling and first-article inspection</li>
+            <li>A first run of a few thousand units</li>
+            <li>Assembly, quality control and packaging</li>
+            <li>Fulfilment setup and initial inventory</li>
+          </ul>
+        </div>
+
+        <div class="fund reveal">
+          <div class="gauge">
+            <svg viewBox="0 0 120 120" width="150" height="150" role="img" aria-label="Worldwide patent filings: 25,000 dollars, 8 percent of the total raise">
+              <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(148,163,184,.16)" stroke-width="9"/>
+              <circle cx="60" cy="60" r="52" fill="none" stroke="#ffb066" stroke-width="9" stroke-linecap="round"
+                stroke-dasharray="25.2 326.7" transform="rotate(-90 60 60)"/>
+            </svg>
+            <div class="gval">$25k</div>
+          </div>
+          <h4>International patent filings</h4>
+          <ul>
+            <li>PCT international application</li>
+            <li>National-phase entry in priority markets</li>
+            <li>Translations and national filing fees</li>
+            <li>Design-patent protection on the housing</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="fundtotal reveal">
+        <span>Total raise sought &mdash; grants and investment combined</span>
+        <b>$325,000</b>
+      </div>
+
+      <!-- COMPETITIVE LANDSCAPE -->
+      <h3 class="bph3 reveal">Competitive landscape</h3>
+      <p class="bpsub reveal">There is no shortage of joint bracing. What is absent is a passive device that
+        resists motion in one direction, leaves the return free, and holds position anywhere &mdash; at a price
+        a patient can take home. These are the products a reviewer would reasonably name as competition.</p>
+
+      <div class="tablewrap reveal">
+        <table class="cmp">
+          <thead>
+            <tr><th>Product</th><th>What it does</th><th>Typical price</th><th>Where Newhab differs</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Spring Loaded<br>Technology</td>
+              <td>Spring-loaded knee bracing that stores and returns energy</td>
+              <td>~$2,000+</td>
+              <td>Springs assist the wearer. Newhab resists and holds &mdash; friction stores no energy to give back.</td>
+            </tr>
+            <tr>
+              <td>JAS &middot; Ultraflex<br>DynaSplint</td>
+              <td>Static-progressive and dynamic splints for contracture and stiffness</td>
+              <td>$1,000&ndash;5,000<br>often reimbursed</td>
+              <td>Built to stretch a stiff joint, clinic-prescribed and costly. Newhab loads the muscle for strength, at a take-home price.</td>
+            </tr>
+            <tr>
+              <td>&Ouml;ssur &middot; Breg<br>DonJoy &middot; Bledsoe</td>
+              <td>Hinged post-operative braces with adjustable range-of-motion stops</td>
+              <td>$200&ndash;800</td>
+              <td>Stops <em>limit</em> how far a joint travels. They apply no graded resistance through the range.</td>
+            </tr>
+            <tr>
+              <td>Biodex &middot; Kinetec</td>
+              <td>Isokinetic dynamometers and continuous passive motion machines</td>
+              <td>$10,000&ndash;50,000+</td>
+              <td>Clinic capital equipment. Newhab is wearable and goes home with the patient.</td>
+            </tr>
+            <tr>
+              <td>AGOGIE &middot; Physiclo<br>Tau Orthopedics</td>
+              <td>Compression apparel with sewn-in elastic resistance</td>
+              <td>$49&ndash;129</td>
+              <td>Elastic resists both directions, cannot be set to a number, and snaps back. No hold.</td>
+            </tr>
+            <tr class="us">
+              <td>Newhab</td>
+              <td>Passive direction-dependent friction brake with a graduated 0&ndash;5&nbsp;lb dial</td>
+              <td>Target: home price point</td>
+              <td>&mdash;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- SWOT -->
+      <h3 class="bph3 reveal">SWOT</h3>
+      <p class="bpsub reveal">Written to be useful rather than flattering. The weaknesses and threats are the
+        real ones, and they are the reason for the raise.</p>
+
+      <div class="swot">
+        <div class="sw sw-s reveal">
+          <header><span class="tag">S</span><h4>Strengths</h4></header>
+          <ul>
+            <li><strong style="color:var(--text)">Direction-dependent by design.</strong> Resists the working motion while leaving the return free &mdash; passively, with no motors or electronics.</li>
+            <li><strong style="color:var(--text)">Holds anywhere.</strong> Friction stores no energy, so the brace cannot drop like a weight or recoil like a band. This is the safety property that matters for a fragile joint.</li>
+            <li>Sub-pound precision in the 0&ndash;5&nbsp;lb band where early rehabilitation actually lives.</li>
+            <li>Entirely passive &mdash; nothing to charge, no battery, no electronics to certify or fail.</li>
+            <li>Patent pending, with a US application on file since June 2026.</li>
+            <li>Nonprofit structure opens non-dilutive funding routes closed to ordinary startups.</li>
+          </ul>
+        </div>
+
+        <div class="sw sw-w reveal">
+          <header><span class="tag">W</span><h4>Weaknesses</h4></header>
+          <ul>
+            <li><strong style="color:var(--text)">No clinical data of any kind.</strong> Nothing has been tested on a patient. Every performance statement is currently a design intent.</li>
+            <li>No production-representative prototype yet, and no bench torque data collected.</li>
+            <li>Single inventor. No engineering, regulatory, quality or commercial team in place.</li>
+            <li>No reimbursement pathway &mdash; there is no HCPCS code for this device, so it would launch cash-pay.</li>
+            <li>No manufacturing partner, tooling or supply chain established.</li>
+            <li>Nonprofit status complicates SBIR eligibility, which requires a small business concern.</li>
+          </ul>
+        </div>
+
+        <div class="sw sw-o reveal">
+          <header><span class="tag">O</span><h4>Opportunities</h4></header>
+          <ul>
+            <li>Care is moving out of the clinic and into the home, and payers are pushing it there.</li>
+            <li>An ageing population and rising joint-replacement volumes expand the rehabilitation population every year.</li>
+            <li>A genuine price gap: reimbursed static-progressive splints run into the thousands; nothing serves this function at a consumer price.</li>
+            <li>Graded, direction-dependent resistance is unoccupied territory in take-home devices.</li>
+            <li>A deep grant landscape exists specifically for rehabilitation engineering.</li>
+            <li>The same mechanism scales to other joints and to gym equipment &mdash; a second market from one invention.</li>
+          </ul>
+        </div>
+
+        <div class="sw sw-t reveal">
+          <header><span class="tag">T</span><h4>Threats</h4></header>
+          <ul>
+            <li><strong style="color:var(--text)">Incumbent distribution.</strong> &Ouml;ssur, Breg and DonJoy own the clinical channel and could build a mechanical equivalent if the category proves out.</li>
+            <li>Hardware startups fail at high rates, and crowdfunded hardware fails to deliver more often still.</li>
+            <li>Patent scope may end up narrower than hoped; adjacent granted claims exist in elbow bracing.</li>
+            <li>Regulatory and advertising exposure if marketing outruns the evidence.</li>
+            <li>Product liability &mdash; a device that loads a healing joint carries real risk that must be designed and labelled for.</li>
+            <li>Without reimbursement, the addressable market is limited to what patients will pay directly.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ROADMAP -->
+      <h3 class="bph3 reveal">Milestones</h3>
+      <p class="bpsub reveal">Each phase is gated on the one before it. Durations are planning estimates.</p>
+
+      <div class="road reveal">
+        <div class="roadgrid">
+          <div class="ph">
+            <div class="dot"></div>
+            <p class="n">PHASE 01</p>
+            <h4>Characterise and finalise</h4>
+            <p class="dur">~6 months &middot; $50k</p>
+            <p>Bench rig, torque-versus-angle data at every dial setting, three iterations to a design freeze, and a small batch of functional units.</p>
+          </div>
+          <div class="ph">
+            <div class="dot"></div>
+            <p class="n">PHASE 02</p>
+            <h4>Usability and design lock</h4>
+            <p class="dur">~4 months</p>
+            <p>Therapists and patients set prescribed loads unsupervised. Fit, comfort and all-day wear. Labelling and instructions for use drafted.</p>
+          </div>
+          <div class="ph">
+            <div class="dot"></div>
+            <p class="n">PHASE 03</p>
+            <h4>Tooling and first run</h4>
+            <p class="dur">~6 months &middot; $250k</p>
+            <p>Injection-mould tooling, first-article inspection, quality system, and a first production run of a few thousand units.</p>
+          </div>
+          <div class="ph">
+            <div class="dot"></div>
+            <p class="n">PHASE 04</p>
+            <h4>Clinical pilot and launch</h4>
+            <p class="dur">~8 months</p>
+            <p>A controlled pilot with a partner clinic, published results, and first distribution through clinics and grant-funded programmes.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PLANNED RESEARCH -->
+      <h3 class="bph3 reveal">Planned research programme</h3>
+      <span class="planned reveal"><span aria-hidden="true">&#9679;</span> None of the following has been conducted yet</span>
+      <p class="bpsub reveal">These are the studies the raise pays for, in the order they must happen. We are
+        stating them here so that partners and reviewers can hold us to the design rather than to a claim.</p>
+
+      <div class="studies">
+        <div class="study reveal">
+          <p class="stage">Stage 1 &middot; Bench</p>
+          <h4>Torque&ndash;angle characterisation</h4>
+          <dl>
+            <dt>Design</dt><dd>Instrumented hinge rig, load cell and goniometer, 0&ndash;150&deg; sweep at every dial setting</dd>
+            <dt>Sample</dt><dd>Mechanical &mdash; 10 units, 5 runs each</dd>
+            <dt>Primary outcome</dt><dd>Resisting torque as a function of joint angle, and repeatability between units</dd>
+            <dt>Purpose</dt><dd>Turns the dial markings into a defensible specification instead of a claim</dd>
+          </dl>
+        </div>
+        <div class="study reveal">
+          <p class="stage">Stage 2 &middot; Bench</p>
+          <h4>Durability and setting drift</h4>
+          <dl>
+            <dt>Design</dt><dd>Accelerated cycling to 100,000 flexion&ndash;extension cycles, with periodic re-measurement</dd>
+            <dt>Sample</dt><dd>6 units</dd>
+            <dt>Primary outcome</dt><dd>Change in delivered torque at a fixed dial setting over life</dd>
+            <dt>Purpose</dt><dd>A dial that drifts is a dial that lies. This establishes service life.</dd>
+          </dl>
+        </div>
+        <div class="study reveal">
+          <p class="stage">Stage 3 &middot; Human factors</p>
+          <h4>Usability and safe self-adjustment</h4>
+          <dl>
+            <dt>Design</dt><dd>Task-based usability study; participants set a prescribed load unsupervised at home</dd>
+            <dt>Sample</dt><dd>~20 patients and ~10 therapists</dd>
+            <dt>Primary outcome</dt><dd>Accuracy of the set load against prescription, and use errors observed</dd>
+            <dt>Purpose</dt><dd>The whole product rests on a patient adjusting it correctly without a clinician present</dd>
+          </dl>
+        </div>
+        <div class="study reveal">
+          <p class="stage">Stage 4 &middot; Clinical</p>
+          <h4>Controlled pilot</h4>
+          <dl>
+            <dt>Design</dt><dd>Randomised pilot against a standard home exercise programme, partner clinic</dd>
+            <dt>Sample</dt><dd>~40 participants in post-operative elbow or knee rehabilitation</dd>
+            <dt>Primary outcome</dt><dd>Change in range of motion and strength at 8 weeks</dd>
+            <dt>Secondary</dt><dd>Adherence to the prescribed programme, and adverse events</dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="bpnote reveal">
+        <b>On the numbers above.</b> The funding figures are our own planning estimates, not quotations.
+        International patent coverage in particular is a range rather than a fixed cost &mdash; a PCT
+        application followed by national-phase entry across several major jurisdictions can exceed the
+        $25,000 allocated here once translations and national fees are counted, and we will publish a revised
+        figure as quotes come in. Timelines are planning estimates and depend on funding.
+      </div>
+
+      <div class="bpnote reveal" style="border-color:var(--line2);background:rgba(255,255,255,.03)">
+        This page is provided for information only. It is not an offer to sell, or a solicitation of an offer
+        to buy, any security, and it is not a guarantee of grant, scope, timeline or performance. Newhab is an
+        investigational rehabilitation device in development; it is not FDA-cleared, no medical claims of
+        treatment efficacy are made, and no clinical evaluation has yet been performed.
+      </div>
+
+      <div class="cta-row reveal" style="margin-top:34px">
+        <a class="btn btn-primary" href="#contact">Talk to us about funding</a>
+        <a class="btn btn-ghost" href="#early-access">Get updates</a>
       </div>
     </div>
   </section>
