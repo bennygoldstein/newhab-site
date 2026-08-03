@@ -241,6 +241,27 @@
   .study dl{display:grid;grid-template-columns:auto 1fr;gap:5px 14px;font-size:.83rem}
   .study dt{color:var(--dim);white-space:nowrap}
   .study dd{color:var(--muted)}
+  .mktgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:980px){.mktgrid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:620px){.mktgrid{grid-template-columns:1fr}}
+  .mkt{border:1px solid var(--line);border-radius:16px;padding:22px 22px 20px;
+    background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.012));
+    transition:transform .2s,border-color .2s}
+  .mkt:hover{transform:translateY(-3px);border-color:rgba(76,201,240,.4)}
+  .mkt b{display:block;font-family:Sora;font-size:1.72rem;font-weight:800;color:var(--orange-soft);
+    letter-spacing:-.02em;line-height:1.1;margin-bottom:8px}
+  .mkt span{display:block;font-size:.87rem;color:var(--muted);line-height:1.45;margin-bottom:11px}
+  .mkt cite{display:block;font-style:normal;font-size:.72rem;color:var(--dim);
+    font-family:"JetBrains Mono",monospace;letter-spacing:.02em}
+  .mkt cite a{color:var(--cyan);text-decoration:underline;text-underline-offset:2px}
+  .keyline{margin-top:20px;border:1px solid rgba(76,201,240,.32);border-radius:16px;padding:24px 26px;
+    background:linear-gradient(92deg,rgba(76,201,240,.08),rgba(255,138,42,.05))}
+  .keyline b{color:var(--cyan-soft)}
+  .keyline p{color:var(--muted);font-size:.95rem;margin-top:8px}
+  .warnbox{border:1px solid rgba(240,120,120,.4);background:rgba(240,120,120,.07);border-radius:16px;
+    padding:22px 24px;margin-top:20px;font-size:.9rem;color:var(--muted)}
+  .warnbox b{color:#ff9b9b;display:block;margin-bottom:8px;font-size:.97rem}
+  .warnbox a{color:var(--cyan);text-decoration:underline;text-underline-offset:2px}
   .planned{display:inline-flex;align-items:center;gap:7px;font-size:.7rem;font-weight:700;letter-spacing:.13em;
     text-transform:uppercase;color:var(--orange-soft);border:1px solid rgba(255,138,42,.4);
     background:rgba(255,138,42,.08);padding:6px 13px;border-radius:999px;margin-bottom:16px}
@@ -745,6 +766,51 @@
         <figcaption>Resists one way, free on the return, holds where you stop. Concept render; tap to view full size.</figcaption>
       </figure>
 
+
+      <!-- MARKET -->
+      <h3 class="bph3 reveal">The market</h3>
+      <p class="bpsub reveal">Every figure below is sourced and dated. Where published estimates disagree, we say so
+        and use the smaller one.</p>
+
+      <div class="mktgrid">
+        <div class="mkt reveal"><b>1,083,061</b><span>primary knee replacements performed in the US in a single year, up 5.0% year over year</span>
+          <cite>Orthopedic Network News / AHRQ HCUP &middot; 2022 &middot; <a href="https://www.aahks.org/wp-content/uploads/2024/09/2023-Hip-and-Knee.pdf" target="_blank" rel="noopener">source</a></cite></div>
+        <div class="mkt reveal"><b>61.2 million</b><span>US adults aged 65 or older &mdash; 18% of the population, growing 3.1% in one year</span>
+          <cite>US Census Bureau &middot; 2024 &middot; <a href="https://www.census.gov/newsroom/press-releases/2025/older-adults-outnumber-children.html" target="_blank" rel="noopener">source</a></cite></div>
+        <div class="mkt reveal"><b>53.2 million</b><span>US adults with doctor-diagnosed arthritis; 88% of them are 45 or older</span>
+          <cite>CDC MMWR 72(41) &middot; 2023 &middot; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10578950/" target="_blank" rel="noopener">source</a></cite></div>
+        <div class="mkt reveal"><b>$147.8 B</b><span>US home health care spending, growing <strong style="color:var(--text)">10.8%</strong> against 7.5% for health spending overall</span>
+          <cite>CMS National Health Expenditure Accounts &middot; 2023 &middot; <a href="https://acasignups.net/25/01/23/2023-national-health-expenditure-highlights-data-cms" target="_blank" rel="noopener">source</a></cite></div>
+        <div class="mkt reveal"><b>$4.08 B &rarr; $5.92 B</b><span>global orthopaedic braces and supports market, 2024 to 2030 &mdash; a 6.5% CAGR, with knee braces the fastest-growing segment</span>
+          <cite>MarketsandMarkets &middot; Jul 2025 &middot; <a href="https://www.marketsandmarkets.com/Market-Reports/orthopedic-braces-support-market-24806829.html" target="_blank" rel="noopener">source</a></cite></div>
+        <div class="mkt reveal"><b>312,199</b><span>licensed physical therapists in the US, plus 132,105 assistants</span>
+          <cite>FSBPT Census &middot; Dec 2024 &middot; <a href="https://www.fsbpt.org/Portals/0/documents/free-resources/2024%20FSBPT%20Census%20of%20Licensed%20PTs%20and%20PTAs%20in%20the%20USA.pdf" target="_blank" rel="noopener">source</a></cite></div>
+      </div>
+
+      <div class="keyline reveal">
+        <b>The number that actually matters: $105.76.</b>
+        <p>That is net revenue per patient visit at the largest US outpatient physical therapy operator &mdash; 6.15 million
+          visits across 780 clinics <a href="https://www.stocktitan.net/news/USPH/u-s-physical-therapy-reports-fourth-quarter-and-full-year-2025-jyxdmwjd9ghi.html" target="_blank" rel="noopener" style="color:var(--cyan)">(FY2025)</a>. A clinic netting roughly a hundred dollars a visit cannot absorb a
+          device out of visit margin, and cannot supervise the patient on the days they are not in the building.
+          That gap &mdash; between visits, unsupervised, at loads a therapist would actually prescribe &mdash; is the
+          entire product thesis.</p>
+      </div>
+
+      <div class="bpnote reveal">
+        <b>How we size this, and what we do not know.</b>
+        We size Newhab as a brace rather than as exercise equipment, because it is worn on the limb. Treat the
+        category figure as a vendor estimate, not measured revenue: MarketsandMarkets puts the 2024 global brace
+        market at $4.08&nbsp;B while Grand View Research puts it at $4.67&nbsp;B &mdash; a 14% spread on the same market
+        and year. <strong>No published source sizes the rehabilitative brace sub-segment</strong>, so our
+        serviceable estimate of $250&ndash;600&nbsp;M is our own arithmetic and is labelled as such. Bottom-up, at a
+        $250 cash price and one device per patient episode, 1% of annual US primary knee replacements is roughly
+        10,800 units and $2.7&nbsp;M a year. <strong>Market size is not this project's binding constraint</strong> &mdash;
+        a $325,000 raise is covered by about 0.12% of knee-replacement volume alone. Clinical evidence and
+        channel access are the constraints. We have also found no defensible US procedure volume for
+        elbow-specific rehabilitation indications; the knee version leads, and sizing the elbow is on the
+        research list.
+      </div>
+
       <!-- COMPETITIVE LANDSCAPE -->
       <h3 class="bph3 reveal">Competitive landscape</h3>
       <p class="bpsub reveal">There is no shortage of joint bracing. What is absent is a passive device that
@@ -770,10 +836,16 @@
               <td>Built to stretch a stiff joint, clinic-prescribed and costly. Newhab loads the muscle for strength, at a take-home price.</td>
             </tr>
             <tr>
-              <td>&Ouml;ssur &middot; Breg<br>DonJoy &middot; Bledsoe</td>
+              <td>THERABAND<br>elastic bands</td>
+              <td>Colour-coded elastic resistance &mdash; what the therapist sends home today</td>
+              <td>A few dollars</td>
+              <td><strong style="color:var(--text)">The real incumbent.</strong> Seven steps span 2.4&ndash;14.2&nbsp;lb, so the whole 0&ndash;5&nbsp;lb clinical range is four discrete jumps. Elastic stores energy and recoils; resistance climbs as you stretch it and pulls both ways.</td>
+            </tr>
+            <tr>
+              <td>DonJoy X-ROM<br>&Ouml;ssur Rebound</td>
               <td>Hinged post-operative braces with adjustable range-of-motion stops</td>
-              <td>$200&ndash;800</td>
-              <td>Stops <em>limit</em> how far a joint travels. They apply no graded resistance through the range.</td>
+              <td>$160.77<br>$249.99</td>
+              <td>Stops <em>limit</em> how far a joint may travel, in 10&deg; increments. They apply no load at all.</td>
             </tr>
             <tr>
               <td>Biodex &middot; Kinetec</td>
@@ -808,10 +880,11 @@
           <ul>
             <li><strong style="color:var(--text)">Direction-dependent by design.</strong> Resists the working motion while leaving the return free &mdash; passively, with no motors or electronics.</li>
             <li><strong style="color:var(--text)">Holds anywhere.</strong> Friction stores no energy, so the brace cannot drop like a weight or recoil like a band. This is the safety property that matters for a fragile joint.</li>
-            <li>Sub-pound precision in the 0&ndash;5&nbsp;lb band where early rehabilitation actually lives.</li>
+            <li>Continuous sub-pound adjustment where the incumbent &mdash; elastic bands &mdash; offers just four discrete steps across the entire 0&ndash;5&nbsp;lb clinical range.</li>
             <li>Entirely passive &mdash; nothing to charge, no battery, no electronics to certify or fail.</li>
             <li>Patent pending, with a US application on file since June 2026.</li>
-            <li>Nonprofit structure opens non-dilutive funding routes closed to ordinary startups.</li>
+            <li>Likely Class&nbsp;I, 510(k)-exempt pathway under 21 CFR 890.3475 (limb orthosis).</li>
+            <li>Nonprofit status is a real advantage for a specific funding tier &mdash; FuzeHub and the Neilsen Foundation are closed to for-profits entirely.</li>
           </ul>
         </div>
 
@@ -823,7 +896,7 @@
             <li>Single inventor. No engineering, regulatory, quality or commercial team in place.</li>
             <li>No reimbursement pathway &mdash; there is no HCPCS code for this device, so it would launch cash-pay.</li>
             <li>No manufacturing partner, tooling or supply chain established.</li>
-            <li>Nonprofit status complicates SBIR eligibility, which requires a small business concern.</li>
+            <li><strong style="color:var(--text)">A 501(c)(3) can neither hold an SBIR award nor issue equity.</strong> Both halves of a conventional funding plan are therefore unavailable to Benny Labs as constituted &mdash; see the note below.</li>
           </ul>
         </div>
 
@@ -843,7 +916,9 @@
           <header><span class="tag">T</span><h4>Threats</h4></header>
           <ul>
             <li><strong style="color:var(--text)">Incumbent distribution.</strong> &Ouml;ssur, Breg and DonJoy own the clinical channel and could build a mechanical equivalent if the category proves out.</li>
-            <li>Hardware startups fail at high rates, and crowdfunded hardware fails to deliver more often still.</li>
+            <li>Hardware startups fail on manufacturing, not ideas. The closest comparable &mdash; Spring Loaded, also a passive mechanical knee brace &mdash; consumed several million dollars of venture, government and crowdfunding capital to reach market, roughly an order of magnitude beyond this raise.</li>
+            <li><strong style="color:var(--text)">The largest commercial payer has already ruled against this device class.</strong> UnitedHealthcare policy 2026T0481BB, effective 1 January 2026, deems patient-controlled mechanical stretching devices &ldquo;unproven and not medically necessary&hellip; due to insufficient evidence of efficacy.&rdquo; Patient-adjusted-at-home is our core positioning and it sits inside that category. <a href="https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-medical-drug/mechanical-stretching-devices.pdf" target="_blank" rel="noopener" style="color:var(--cyan)">Policy</a></li>
+            <li><strong style="color:var(--text)">The 510(k) exemption is conditional.</strong> 21 CFR 890.9 withdraws it where a device uses a different fundamental technology than the predicate. The listed predicates are a knee cage, an elastic stocking and a corrective shoe &mdash; all passive supports with no mechanism. A clutch-and-brake assembly invites the argument.</li>
             <li>Patent scope may end up narrower than hoped; adjacent granted claims exist in elbow bracing.</li>
             <li>Regulatory and advertising exposure if marketing outruns the evidence.</li>
             <li>Product liability &mdash; a device that loads a healing joint carries real risk that must be designed and labelled for.</li>
@@ -939,11 +1014,62 @@
       </div>
 
       <div class="bpnote reveal">
-        <b>On the numbers above.</b> The funding figures are our own planning estimates, not quotations.
-        International patent coverage in particular is a range rather than a fixed cost &mdash; a PCT
-        application followed by national-phase entry across several major jurisdictions can exceed the
-        $25,000 allocated here once translations and national fees are counted, and we will publish a revised
-        figure as quotes come in. Timelines are planning estimates and depend on funding.
+        <b>On the numbers above.</b> These are planning estimates, not quotations. Two lines need naming
+        honestly. <strong style="color:var(--text)">The $250,000 tooling figure is unquoted</strong> &mdash; obtaining two
+        contract-manufacturer quotes is a Phase&nbsp;3 gate, because a multi-part mechanical assembly can absorb a
+        large share of a production budget in tooling before a single unit ships. And the plan does not yet carry
+        FDA&nbsp;overheads: a 513(g) classification request runs roughly <strong style="color:var(--text)">$4,300</strong> at the
+        small-business rate, and annual establishment registration is <strong style="color:var(--text)">$13,785</strong>, with
+        no small-business discount and no first-year waiver. Timelines depend on funding.
+      </div>
+
+
+      <!-- FUNDING STRATEGY -->
+      <h3 class="bph3 reveal">Funding strategy</h3>
+
+      <div class="warnbox reveal">
+        <b>&#9888; A structural decision has to come first.</b>
+        A 501(c)(3) <strong style="color:var(--text)">cannot receive an SBIR or STTR award</strong> &mdash;
+        <a href="https://www.sbir.gov/faq/eligibility-requirements" target="_blank" rel="noopener">SBIR.gov</a> is
+        unambiguous that the awardee must be organised for profit. It also
+        <strong style="color:var(--text)">cannot issue equity</strong>: no shares, no cap table, no SAFE. That removes
+        both halves of a conventional plan, and it matters because a single SBIR Phase&nbsp;I
+        (<a href="https://www.sbir.gov/about" target="_blank" rel="noopener">$323,090 statutory guideline</a>, or up to
+        $305,000 at NSF) would fund this entire raise outright.
+        <br><br>
+        <strong style="color:var(--text)">The resolution:</strong> a two-entity structure. A for-profit vehicle, majority-owned
+        by the inventor personally, holds the commercial track, takes equity and applies for SBIR; Benny Labs holds
+        the research and access mission and takes the nonprofit-only grants &mdash; with a written patent licence
+        between them executed <em>before</em> any SBIR self-certification is signed. This is a decision to make before
+        the first application is drafted, not after.
+      </div>
+
+      <div class="tablewrap reveal" style="margin-top:20px">
+        <table class="cmp">
+          <thead><tr><th>Programme</th><th>Ceiling</th><th>Fit &mdash; and the catch</th></tr></thead>
+          <tbody>
+            <tr><td>NIH Parent R21<br>PA-25-306</td><td>$275,000<br>over 2 years</td>
+              <td>501(c)(3) organisations are explicitly eligible &mdash; the largest grant Benny Labs could hold in its own name. Catch: R21 is a <em>research</em> mechanism. Reviewers want a hypothesis and a study, not a prototype build.</td></tr>
+            <tr><td>FuzeHub<br>Manufacturing Grants (NY)</td><td>$65,000</td>
+              <td><strong style="color:var(--text)">The best structural fit found.</strong> The lead applicant must be a New York not-for-profit partnered with a NY manufacturer under 500 employees &mdash; precisely our shape, and it covers most of the prototype tranche. The 2026 round has closed; target spring 2027.</td></tr>
+            <tr><td>Craig H. Neilsen<br>Foundation</td><td>Programme-dependent</td>
+              <td>Grants go only to nonprofits, so our status is an advantage. Catch: strictly spinal-cord-injury scoped and reviewed by SCI clinicians &mdash; it needs a genuine SCI application, not a relabel.</td></tr>
+            <tr><td>NIH SBIR<br>via NICHD/NCMRR</td><td>$323,090 Phase I<br>$2.15M Phase II</td>
+              <td>Strongest topical fit &mdash; NCMRR's remit expressly covers orthotics and assistive devices. <strong style="color:var(--text)">Requires the for-profit entity.</strong> Receipt dates 5 Sep, 5 Jan, 5 Apr.</td></tr>
+            <tr><td>NSF SBIR<br>Phase I</td><td>up to $305,000</td>
+              <td>Requires an invited <em>Project Pitch</em> before a full proposal &mdash; a gating step first-timers miss. Also requires the for-profit entity.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bpnote reveal">
+        <b>On timing, and on pre-orders.</b> No federal grant reaches this project inside the current calendar
+        year. The realistic sequence is foundation and state grants for the prototype, the entity restructure and
+        an SBIR application running in parallel, and the production run financed from SBIR Phase&nbsp;II, angel
+        capital or pre-orders once bench data exists. On crowdfunding: it is a legitimate demand-validation tool
+        and a poor production-financing tool &mdash; Kickstarter's Technology category carries the platform's lowest
+        success rate at roughly 25%. We would use a modest campaign to validate demand and build a prescriber
+        list, not to fund a production run.
       </div>
 
       <div class="bpnote reveal" style="border-color:var(--line2);background:rgba(255,255,255,.03)">
